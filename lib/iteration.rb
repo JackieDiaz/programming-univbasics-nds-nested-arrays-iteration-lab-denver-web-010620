@@ -51,15 +51,17 @@ row_index = 0
 while row_index < src.count do
  element_index = 0
  while element_index < src[row_index].count do
-   if src[row_index][element_index] % src[row_index][element_index] == 0
+   if src[row_index][element_index][0] % src[row_index][element_index][1] == 0
    total += src[row_index][element_index]
    element_index += 1
  else 
-   if src[row_index][element_index] % src[row_index][element_index] == 1
+   if src[row_index][element_index][0] % src[row_index][element_index][1] == 1
      arr << src[row_index][element_index]
+     element_index += 1
  end 
  end
  row_index += 1
+ total
 end
 
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
