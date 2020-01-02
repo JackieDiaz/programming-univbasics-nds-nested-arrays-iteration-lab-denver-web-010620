@@ -45,20 +45,23 @@ end
 
 def total_even_pairs(src)
   #use the traverse aoa to single value from example
+  arr =[]
   total = 0
 row_index = 0
-while row_index < guessing_game_grid.count do
+while row_index < src.count do
  element_index = 0
- while element_index < guessing_game_grid[row_index].count do
-   total += guessing_game_grid[row_index][element_index]
+ while element_index < src[row_index].count do
+   if src[row_index][element_index] % src[row_index][element_index] == 0
+   total += src[row_index][element_index]
    element_index += 1
+ else 
+   if src[row_index][element_index] % src[row_index][element_index] == 1
+     arr << src[row_index][element_index]
+ end 
  end
  row_index += 1
 end
 
-  
-  
-  
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
   # total
