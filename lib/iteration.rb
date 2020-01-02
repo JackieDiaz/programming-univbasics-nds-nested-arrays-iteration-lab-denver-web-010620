@@ -63,6 +63,7 @@ while row_index < src.count do
  row_index += 1
  total
 end
+end 
 
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
