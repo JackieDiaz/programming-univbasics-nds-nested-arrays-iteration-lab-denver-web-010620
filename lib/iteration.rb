@@ -1,3 +1,4 @@
+require "pry"
 def join_ingredients(src)
  inner_array = [['pepperoni', 'sausage'], ['green olives', 'green peppers'], ['onions', 'pineapple']]
 outer_array = [["I love ", inner_array[0][0], " and ", inner_array[0][1], " on my pizza"].join(''), ["I love ", inner_array[1][0], " and ", inner_array[1][1], " on my pizza"].join(''), ["I love ", inner_array[2][0], " and ", inner_array[2][1], " on my pizza"].join('')]
@@ -52,6 +53,7 @@ while row_index < src.count do
  element_index = 0
  while element_index < src[row_index].count do
    if src[row_index][element_index][0] % src[row_index][element_index][1] == 0
+   binding.pry
    total += src[row_index][element_index]
    element_index += 1
  else 
